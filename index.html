@@ -1,25 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <title>Country Information</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        h1,h2,h3,h4,h5,h6,p{
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: #1f2022;
+            height: 100vh;
+            display: flex;
+            padding: 10rem 8rem;
+            padding-top: 6rem;
+        }
+        .country-list{
+            width: 25rem;
+            padding: .4rem;
+            
+        }
+        .body {
+            width: 70%;
+            height: auto;
+            margin-left: 6rem;
+            background: white;
+            display: flex;
+            
+        }
+        .flag{
+            width: 60%;
+            height: auto;
+            margin-right: 18px;
+            padding: 10px;
+            display: block;
+            
+        }
+        .right{
+            padding: 10px;
+        }
+        .body div:not(.right){
+            display: flex;
+            margin: 25px 0;
+            text-align: left;
+        }
+        ul{
+            margin: 0;
+            list-style: none;
+            padding: 0;
+        }
+        li{
+            margin-bottom: 8px;
+        }
+        span{
+            width: 100px;
+            font-family: 'Lato';
+            font-size: 17px;
+        }
+    </style>
 </head>
-    <body>
-        <div class="container">
-            <div class="body">
-                <select name="country-list" id="country-list" class="country-list">
-                    <option value="country" selected='true' disabled='disabled'>Countries</option>
-                </select>
-                <img src="" alt="flag" class="flag">
+
+<body>
+    <div class="container">
+        <div class="select-box">
+            <select name="country-list" id="country-list" class="country-list">
+                <option value="country" selected='true' disabled='disabled'>Countries</option>
+            </select>
+        </div>
+        <div class="body">
+            <img src="" alt="flag" class="flag">
+            <div class='right'>
+                <div class="lang-wrap">
+                    <span>Languages: </span>    
+                    <ul class="languages"></ul>
+                </div>
+                <div><span>Area: </span><p class="area"></p></div>
+                <div><span>Capital: </span><p class="capital"></h></div>
+                <div><span>Population:</span><p class="population"></p></div>
+                <div><span>Currency:</span><p class="currency"></p></div>
             </div>
         </div>
-        <ul class="languages"></ul>
-        <p class="area"></p>
-        <h3 class="capital"></h3>
-        <p class="population"></p>
-        <p class="currency"></p>
-        <script src="app.js"></script>
-    </body>
+    </div>
+    <script src="app.js"></script>
+</body>
+
 </html>
